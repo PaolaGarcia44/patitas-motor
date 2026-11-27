@@ -1,6 +1,9 @@
-const Nodo = require("../src/Nodo");
+const Nodo = require("../src/estructuras/Nodo");
+const ListaEnlazada = require("../src/estructuras/ListaEnlazada");
 
-// Primera atención: vacunación
+//dia 1 semana 2: 1 minireto
+
+/* // Primera atención: vacunación
 const atencion1 = {
     fecha: "02/02",
     motivo: "Vacunación",
@@ -68,4 +71,26 @@ while (actual !== null) {
     actual = actual.siguiente;
 }
 
-console.log("Costo total:", total);
+console.log("Costo total:", total); */
+
+//dia 1 semana 2: 2 minireto
+
+const historialLola = new ListaEnlazada();
+console.log(historialLola);
+
+// Agregar al final
+historialLola.agregarAlFinal({
+    fecha: "02/02",
+    motivo: "Vacunación",
+    veterinario: "Dra. Ríos",
+    costo: 85000
+});
+
+// Agregar al inicio
+historialLola.agregarAlInicio({
+    fecha: "15/01",
+    motivo: "Primera consulta",
+    veterinario: "Dr. Gómez",
+    costo: 50000
+});
+console.log(historialLola);
